@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+</head>
+<body>
+    <h3>Design choices for HTML:</h3>
+    <ul>
+        <li>
+            Appropriate common informations used in header and footer used in all 4 pages as mentioned in the requirements,
+            <br />i.e. Headers with hyperlinks to "HOME", "NOW SHOWING" and "TICKETS" pages and footers to "HOME" and "DESIGN" pages.
+        </li>
+        <li>
+            Blocks used in every pages according to the requirements using the "div" tags, "header" and "footer" tags.
+        </li>
+        <li>
+            In the Home Page, the video clip of Casablanca is played in both .mp4 and .ogg formats to support multi-browser compatibility,<br />
+            and the video also has a thumbnail (reference of source below) from the movie to make it  more attractive.
+        </li>
+        <li>
+            In the Now Showing page, drop-down lists (options select) were used to let the user choose different cinema halls and showtimes, <br />
+            and a screenshot of the map of Hong Kong's shopping malls have been used to show locations of cinema halls (reference below)
+        </li>
+        <li>
+            In the Tickets page, a table with appropriate border and rows and columns have been used to show seat arrangements, as per requirement,<br />
+            and a confirm button will be used to confirm the booked seats, which then takes the user directly to the Print page.
+        </li>
+        <li>
+            No special formatting in the Print page, just the information of the tickets with the seat numbers.
+        </li>
+    </ul>
+    <h3>References:</h3>
+    <ul>
+        <li>
+            Cinema Location Map Image: <a href="https://www.google.com/search?rlz=1C1UEAD_enBD959BD959&tbs=lf:1,lf_ui:10&tbm=lcl&sxsrf=APq-WBvBs3AqzH6A1jVssKUPyEW0vfc8kA:1646277563751&q=shopping+malls+in+hong+kong&rflfq=1&num=10#rlfi=hd:;si:;mv:[[22.299665631090797,114.2421479099025],[22.25534694725265,114.14636086156266],null,[22.27750804465501,114.19425438573258],14]" target="_blank">
+                Google "Shopping Malls in Hong Kong"
+            </a>
+        </li>
+        <li>
+            Casablanca video thumbnail: <a href="https://www.inventorsdigest.com/wp-content/uploads/2020/06/July2020-InventorArchives-840x640.jpg" target="_blank">Here</a>
+        </li>
+    </ul>
+    <h3>Design choices for CSS:</h3>
+    <ul>
+        <li>
+            <img src="layout.png" height="600" alt="Image Not Found" />
+        </li>
+        <li>
+            Only one stylesheet was used (references.css). This stylesheet contains the styling for the navigation menu, where the borders were added, the texts were centralized,<br />
+            the font-style and colours were set, the background-color was set. The css stylesheet also has the common styling for the company name and the animation of the logo.<br />
+        </li>
+        <li>
+            One feature that was used was the bordering of the navigation menu. Using border styling, a dotted border was given to it, with a border radius, which gave the borders<br />
+            rounded edges. The border was also filled up with the colour goldenrod.
+        </li>
+        <li>
+            Another feature that was used was the font-styles. All texts in the webpages were given a common font-style of Times New Roman, which was added to the references.css as<br />
+            part of *{}.
+        </li>
+        <li>
+            One more feature used was hovering effect of the hyperlinks. By default, the hyperlinks have a blue colour, but when hovered over, the cursor changes to a pointer, and the<br />
+            text colour changes to red. The line that hyperlinks come with by default has been removed.
+        </li>
+        <li>
+            No outside sources were used.
+        </li>
+    </ul>
+    <h3>Code for Javascript:</h3>
+    <ul>
+        <li>
+            In Movies page, the movies.js was used which contain a getMovies() function, containing an array of movies and their information. An object "movies" was created using the <br />
+            getMovies function. Then the pbject was used to insert innerHTML in the movies page to display movie information.
+        </li>
+        <li>
+            The videos are being created as a slideshow so that every video play on a loop within an interval of 2 seconds. This was done using a function, where the style.display is <br />
+            'none' and then each video is made display.block one by one using a loop.
+        </li>
+        <li>
+            Only the Select Cinemas drop-down list could be made, which was created by iterating over and object created from the getMovies() function.
+        </li>
+    </ul>
+</body>
+</html>

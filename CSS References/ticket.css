@@ -1,0 +1,17 @@
+.unclick3 {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.seat:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+}
+
+.ticket {
+    text-align: center;
+    margin-top: 20px;
+    margin-botton: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

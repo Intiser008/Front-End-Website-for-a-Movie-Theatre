@@ -1,0 +1,29 @@
+.unclick1 {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.movimg {
+    float: left;
+}
+
+    .movimg:hover {
+        cursor: pointer;
+    }
+
+.movieinfo {
+    font-weight: bold;
+}
+
+.movieinfo1 {
+    font-weight: bold;
+}
+
+.movieinfo2 {
+    font-weight: bold;
+}
+
+video {
+    width: 600px;
+    height: 450px;
+}

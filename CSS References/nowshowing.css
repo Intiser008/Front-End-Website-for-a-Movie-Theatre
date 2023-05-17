@@ -1,0 +1,9 @@
+.unclick2 {
+    cursor: not-allowed; 
+    pointer-events: none;
+}
+
+.nowshowing {
+    text-align: center;
+    font-size: 1.25em;
+}

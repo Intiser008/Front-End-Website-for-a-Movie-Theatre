@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS References/references.css" />
+    <link rel="stylesheet" type="text/css" href="CSS References/homepage.css" />
+<body>
+    <header>
+        <div class="navigation">
+            <h2 class="xyz">
+                <a class="unclick1" href="homepage.html" target="_blank">HOME</a> &nbsp;&nbsp;
+                <a class="unclick2" href="nowshowing.html" target="_blank">NOW SHOWING</a> &nbsp;&nbsp;
+                <a class="unclick3" href="ticket.html" target="_blank">TICKET</a>
+            </h2>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="box1">
+            <img class="logo" src="images/filmreel.png" alt="Image Not Found">
+        </div>
+        <h1 id="company">
+            CITY CINEMA
+        </h1>
+    </header>
+    <br />
+    <div class="movieinfo"></div>
+    <div class="movieinfo1">
+        <h3>Now showing:</h3>&nbsp;
+        <br />
+    </div>
+    <div class="movieinfo2">
+        <h3>Upcoming:</h3>&nbsp;
+        <br />
+    </div>
+    <br />
+    <footer class="Footer">
+        <p>
+            Footer: @Copyright of resources belong to corresponding copyright owners - fair use for education purpose<br />
+            <a class="unclick1" href="homepage.html" target="_blank"><big>Home</big></a> &nbsp;
+            <a href="design.html" target="_blank"><big>Design</big></a>
+        </p>
+    </footer>
+    <script src="Javascript/movies.js"></script>
+    <script>
+        let movies = getMovies();
+        let count = 0;
+
+        for (i = 0; i < movies.length; i++) {
+            let name = movies[i].name;
+            let thumb = movies[i].thumbnail;
+            let cast = movies[i].cast;
+            let dir = movies[i].director;
+            let time = movies[i].duration;
+            let identity = movies[i].id;
+            let sources = movies[i].src;
+
+            let clip = document.createElement("video");
+            clip.controls = "controls";
+            clip.autoplay = "autoplay";
+            clip.muted = "muted";
+
+            clip.innerHTML = "<source src=" + sources.replace(".mp4", ".ogg") + " type=\"video/ogg\"> <source src=" + sources + " type=\"video/mp4\"> <h2>Your Browser does not support this video format</h2>";
+            document.querySelector(".movieinfo").appendChild(clip);
+
+            if (movies[i].type == "now") {
+                let para = document.createElement("dd");
+                para.innerHTML = "<h3><span>Movie:</span> " + name + "</h3><img src=" + thumb + " alt=" + name + " class=\"thumbnail\" onclick=\"clickedimg(" + identity + ")\"> <p class=\"desc\"><span>Cast:</span> " + cast + " <br><span>Director:</span> " + dir + " <br><span>Duration:</span> " + time + "</p><br>";
+                document.querySelector(".movieinfo1").appendChild(para);
+                count += 1;
+
+            } else {
+                let para = document.createElement("dd");
+                para.innerHTML = "<h3><span>Movie:</span> " + name + "</h3><img src=" + thumb + " alt=" + name + " class=\"thumbnail\" onclick=\"clickedimg(" + identity + ")\"> <p class=\"desc\"><span>Cast:</span> " + cast + " <br><span>Director:</span> " + dir + " <br><span>Duration:</span> " + time + "</p><br>";
+                document.querySelector(".movieinfo2").appendChild(para);
+            }
+        }
+
+        let index = 0;
+
+        switchVideo();
+
+        function switchVideo() {
+            let i;
+            let slides = document.querySelectorAll("video");
+            console.log(slides);
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = " none ";
+            }
+            index += 1;
+
+            if (index > slides.length) {
+                index = 1;
+            }
+            slides[index - 1].style.display = "block";
+            slides[index - 1].load();
+            slides[index - 1].onended = function () { setTimeout(switchVideo, 2000); }
+        }
+    </script>
+</body>
+</html>

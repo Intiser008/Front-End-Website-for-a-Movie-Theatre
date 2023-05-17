@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Now Showing</title>
+        <link rel="stylesheet" type="text/css" href="CSS References/references.css" />
+        <link rel="stylesheet" type="text/css" href="CSS References/nowshowing.css" />
+    </head>
+    <body>
+        <header>
+            <div class="navigation">
+                <h2 class="xyz">
+                    <a class="unclick1" href="homepage.html" target="_blank">HOME</a> &nbsp;&nbsp;
+                    <a class="unclick2" href="nowshowing.html" target="_blank">NOW SHOWING</a> &nbsp;&nbsp;
+                    <a class="unclick3" href="ticket.html" target="_blank">TICKET</a>
+                </h2>
+            </div>
+            <br /><br /><br /><br /><br />
+            <div class="box1">
+                <img class="logo" src="images/filmreel.png" alt="Image Not Found">
+            </div>
+            <h1 id="company">
+                CITY CINEMA
+            </h1>
+        </header>
+        <br />
+
+
+
+        <div class="nowshowing">
+            <big><b>Select Cinema:</b></big>
+            <select id="selCin" onchange="getInput();" name="Select Cinema">
+                <option value="Option">Select an option</option>
+            </select>
+        </div>
+        <br /><br />
+
+
+
+        <div id="shonen" class="nowshowing">
+
+                <img src="images/bigbuck.jpg" alt="Image not found" />
+                <br />
+                Big Buck Bunny 
+                <br />
+                <select name="Select Time" id="st">
+                    <option value="Showtime">Select Showtime</option>
+                    <option value="09">26<sup>th</sup> March, Saturday - 09.00</option>
+                    <option value="13">26<sup>th</sup> March, Saturday - 13.00</option>
+                    <option value="17">26<sup>th</sup> March, Saturday - 17.00</option>
+                </select>
+                &nbsp;
+                <button>
+                    Buy Ticket
+                </button>
+
+            <br />
+
+                <img src="images/casablanca.png" alt="Image not found" />
+                <br />
+                Casablanca
+                <br />
+                <select name="Select Time" id="st">
+                    <option value="Showtime">Select Showtime</option>
+                    <option value="10">26<sup>th</sup> March, Saturday - 10.00</option>
+                    <option value="14">26<sup>th</sup> March, Saturday - 14.00</option>
+                    <option value="20">26<sup>th</sup> March, Saturday - 20.00</option>
+                </select>
+                &nbsp;
+                <button>
+                    Buy Ticket
+                </button>
+
+            <br />
+
+                <img src="images/barbecue.jpg" alt="Image not found" />
+                <br />
+                Barbeque Majik
+                <br />
+                <select name="Select Time" id="st">
+                    <option value="Showtime">Select Showtime</option>
+                    <option value="11">26<sup>th</sup> March, Saturday - 11.00</option>
+                    <option value="15">26<sup>th</sup> March, Saturday - 15.00</option>
+                    <option value="18">26<sup>th</sup> March, Saturday - 18.00</option>
+                </select>
+                &nbsp;
+                <button>
+                    Buy Ticket
+                </button>
+
+            <br />
+
+                <img src="images/barbecue.jpg" alt="Image not found" />
+                <br />
+                Barbeque Majik
+                <br />
+                <select name="Select Time" id="st">
+                    <option value="Showtime">Select Showtime</option>
+                    <option value="11">26<sup>th</sup> March, Saturday - 11.00</option>
+                    <option value="15">26<sup>th</sup> March, Saturday - 15.00</option>
+                    <option value="18">26<sup>th</sup> March, Saturday - 18.00</option>
+                </select>
+                &nbsp;
+                <button>
+                    Buy Ticket
+                </button>
+
+            <br />
+
+                <img src="images/chocolate.jpg" alt="Image not found" />
+                <br />
+                Chocolates
+                <br />
+                <select name="Select Time" id="st">
+                    <option value="Showtime">Select Showtime</option>
+                    <option value="12">26<sup>th</sup> March, Saturday - 12.00</option>
+                    <option value="16">26<sup>th</sup> March, Saturday - 16.00</option>
+                    <option value="21">26<sup>th</sup> March, Saturday - 21.00</option>
+                </select>
+                &nbsp;
+                <button>
+                    Buy Ticket
+                </button>
+
+        </div>
+
+
+        <div class="nowshowing">
+            <h3>Cinema Locations</h3>
+            <a href="images/map.png" target="_blank">
+                <img src="images/map.png" alt="Image Not Found" width="600">
+            </a>
+            <br /><br /><br />
+        </div>
+
+
+        <footer class="Footer">
+            <p>
+                Footer: @Copyright of resources belong to corresponding copyright owners - fair use for education purpose<br />
+                <a class="unclick1" href="homepage.html" target="_blank"><big>Home</big></a> &nbsp;
+                <a href="design.html" target="_blank"><big>Design</big></a>
+            </p>
+        </footer>
+        <script src="http://courses.cs.cityu.edu.hk/cs2204/cw3/cinemas.js"></script>
+        <script src="Javascript/movies.js"></script>
+        <script>
+            function getMovieName(movieArray, id) {
+                for (let i = 0; i < movieArray.length; i++) {
+                    if (movieArray[i].id == id) return movieArray[i].name;
+                }
+                return undefined;
+            }
+
+            function getMovieImg(movieArray, id) {
+                for (let i = 0; i < movieArray.length; i++) {
+                    if (movieArray[i].id == id) return movieArray[i].thumbnail;
+                }
+                return undefined;
+            }
+
+            let movies = getMovies(); // this becomes an array of objects - movie details objects.
+  
+            let cinemas = getCinemas();
+            alert(cinemas[0].branchName);
+            console.log(cinemas.length);
+            for (let i = 0; i < cinemas.length; i++) {
+                console.log(cinemas[i].branchName + "\n");
+
+                let theatre = document.createElement("option");
+
+                theatre.innerHTML = cinemas[i].branchName;
+                document.querySelector("#selCin").appendChild(theatre);
+            }
+            
+            function getInput() {
+                let sheelect = document.querySelector("#selCin");
+                let userInput = sheelect.options[sheelect.selectedIndex].value;
+                console.log(userInput);
+                for (t = 0; t < cinemas.length; t++) {
+                    if (userInput == cinemas[t].branchName) {
+                        let nameMovie = document.createElement("div");
+                        for (s = 0; s < cinemas[t].movies.length; s++) {
+                            nameMovie.innerHTML = "<img src=" + getMovieName(movies, cinemas[t].movies[t].id) + ">"
+                            document.querySelector("#shonen").appendChild(nameMovie);
+                        }
+                        
+                    }
+                }
+
+            }           
+
+        
+
+
+/*              for (let j = 0; j < cinemas[i].movies.length; j++) {
+                    console.log("  movie id " + cinemas[i].movies[j].id + "\n");
+                    console.log("  movie name " + getMovieName(movies, cinemas[i].movies[j].id));
+
+                    let thumbMovie = document.createElement("div");
+                    thumbMovie.innerHTML = "<img src=" + getMovieImg(movies, cinemas[i].movies[j].id) + ">"
+                    document.querySelector("#shonen").appendChild(thumbMovie);
+                    for (let k = 0; k < cinemas[i].movies[j].shows.length; k++) {
+                        console.log("    index " + cinemas[i].movies[j].shows[k].index + "\n");
+                        console.log("    datetime " + cinemas[i].movies[j].shows[k].datetime + "\n");
+                        console.log("    house " + cinemas[i].movies[j].shows[k].house + "\n\n");
+                    }
+                }
+*/
+        </script>
+    </body>
+</html>

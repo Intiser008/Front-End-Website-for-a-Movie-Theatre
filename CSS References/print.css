@@ -1,0 +1,14 @@
+@media print {
+    header, footer {
+        display: none;
+    }
+
+    #pba {
+        page-break-after: always;
+    }
+}
+
+.print {
+    text-align: center;
+    font-size: 1.15em;
+}

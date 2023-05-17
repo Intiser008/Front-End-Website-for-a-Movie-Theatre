@@ -1,0 +1,75 @@
+body {
+    background-color: beige;
+    color: rgb(210,105,30);
+}
+* {
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+a:hover{
+    color: red;
+}
+#company {
+    border: 3px solid black;
+    border-radius: 40px;
+    margin: auto;
+    design: block;
+    text-align: center;
+    width: 353px;
+}
+
+.logo {
+    margin: auto;
+    design: block;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation-name: logoSway;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.navigation {
+    border: 3px dashed black;
+    border-radius: 40px;
+    background-color: darkgoldenrod;
+    text-align: center;
+    overflow:hidden;
+    position:fixed;
+    width:100%;
+}
+.xyz {
+    position: sticky;
+    top: 0;
+}
+
+.box1 {
+    margin: auto;
+    design: block;
+    width: 353px;
+    text-align: center;
+}
+
+
+@keyframes logoSway {
+    0% {
+        right: 0px;
+    }
+
+    25% {
+        right: 100px;
+    }
+
+    75% {
+        right: -100px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+.Footer{
+    text-align: center;
+}

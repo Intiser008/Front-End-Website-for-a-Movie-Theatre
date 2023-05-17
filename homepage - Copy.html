@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <style>
+            .unclick1{
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+            .movimg{
+                float:left;
+            }
+            .movimg:hover{
+                cursor: pointer;
+            }
+            .movieinfo{
+                font-weight: bold;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="references.css" />
+    </head>
+    <body>
+        <header>
+            <div class="box1">
+                <img class="logo" src="filmreel.png" alt="Image Not Found">
+            </div>
+            <h1 id="company">
+                CITY CINEMA
+            </h1>
+            <div class="navigation">
+                <h2 class="xyz">
+                    <a class="unclick1" href="homepage - Copy.html" target="_blank">HOME</a> &nbsp;&nbsp;
+                    <a class="unclick2" href="nowshowing.html" target="_blank">NOW SHOWING</a> &nbsp;&nbsp;
+                    <a class="unclick3" href="ticket.html" target="_blank">TICKET</a>
+                </h2>
+            </div>
+
+        </header>
+        <br />
+        <div class="movieinfo">
+            <h3>Showing a clip from Casablanca:</h3>
+            <br />
+            <video controls autoplay width="400" poster="xyz.jpg" loop>
+                <source src="https://courses.cs.cityu.edu.hk/cs2204/video/casablanca-s.mp4">
+                <source src="https://courses.cs.cityu.edu.hk/cs2204/video/casablanca-s.ogg">
+                Sorry, the browser does not support the video format.
+            </video>
+        </div>
+        <br />
+        <div class="movieinfo">
+            <p>
+                Cast: Humphrey Bogart, Ingrid Bergmen
+            <br />
+                Director: Michael Curtiz
+            <br />
+                Duration: 130 minutes
+            </p>
+        </div>
+        <br />
+        <div class="movieinfo">
+            <h3>Now showing:</h3>&nbsp;
+            <br />
+            <p>Big Buck Bunny</p>
+            <img class="movimg" src="bigbuck.jpg" alt="Image not found" />
+            <p>Cast: Andreas Goralczyk
+            <br />Director: Sacha Goedegebure
+            <br />Duration: 10 minutes</p>
+            <br />
+            <p>Barbeque Majik</p>
+            <img class="movimg" src="barbecue.jpg" alt="Image not found" />
+            <p>Cast: Idiot Sandwich
+            <br />Director: Gordon Ramsay
+            <br />Duration: 39 mintues</p>
+            <br />
+            <p>Chocolates</p>
+            <img class="movimg" src="chocolate.jpg" alt="Image not found" />
+            <p>Cast: Charlie Bucket
+            <br />Director: Willy Wonka
+            <br />Duration: 142 minutes</p>
+            <br />
+            <h3>Upcoming:</h3>&nbsp;
+            <br />
+            <p>Nature</p>
+            <img class="movimg" src="nature.jpg" alt="Image not found" />
+            <p>Cast: Tarzan Smith
+            <br />Director: Ric Flair
+            <br />Duration: 23 minutes</p>
+            <br />
+            <p>Wonders</p>
+            <img class="movimg" src="wonders.jpg" alt="Image not found" />
+            <p>Cast: Lionel Messi
+            <br />Director: Pep Guardiola
+            <br />Duration: 90 minutes</p>
+            <br />
+            <p>Animals</p>
+            <img class="movimg" src="wildlife.jpg" alt="Image not found" />
+            <p>Cast: Shadman Yakub, Afzal Hosen, Ishtila Sharara
+            <br />Director: Intiser Rahman, Muntaha Noor Orpa
+            <br />Duration: 69 minutes</p>
+        </div>
+        <br />
+        <footer class="Footer">
+            <p>Footer: @Copyright of resources belong to corresponding copyright owners - fair use for education purpose<br />
+            <a class="unclick1" href="homepage.html" target="_blank"><big>Home</big></a> &nbsp;
+            <a href="design.html" target="_blank"><big>Design</big></a>
+            </p>        
+        </footer>
+
+    </body>
+</html>
